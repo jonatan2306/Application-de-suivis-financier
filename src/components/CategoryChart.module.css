@@ -1,0 +1,45 @@
+.wrapper {
+  width: 100%;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.empty span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.empty p {
+  font-size: 13px;
+  text-align: center;
+}
+
+.tooltip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: var(--shadow);
+}
+
+.tooltipName {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tooltipValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}

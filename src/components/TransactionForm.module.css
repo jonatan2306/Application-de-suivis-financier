@@ -1,0 +1,105 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.typeToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.typeBtn {
+  padding: 10px;
+  border: none;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.typeBtn:hover {
+  background: var(--border);
+}
+
+.expenseActive {
+  background: var(--expense-light) !important;
+  color: var(--expense) !important;
+}
+
+.incomeActive {
+  background: var(--income-light) !important;
+  color: var(--income) !important;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.input:focus {
+  border-color: var(--primary);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--expense);
+  background: var(--expense-light);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.submit {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s, transform 0.1s;
+  color: #fff;
+}
+
+.submit:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submit:active {
+  transform: translateY(0);
+}
+
+.submitExpense {
+  background: var(--expense);
+}
+
+.submitIncome {
+  background: var(--income);
+}
