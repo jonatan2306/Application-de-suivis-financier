@@ -92,7 +92,7 @@ export default function BudgetProgress({ monthlyBudget, setMonthlyBudget, monthl
         <div className={styles.titleRow}>
           <span className={styles.title}>Budget mensuel</span>
           {isOver && <span className={styles.badge}>Dépassé !</span>}
-          {isWarning && <span className={styles.badge} style={{ background: '#ede9fe', color: '#7c3aed' }}>Attention</span>}
+          {isWarning && <span className={`${styles.badge} ${styles.badgeWarn}`}>Attention</span>}
         </div>
         <button className={styles.editBtn} onClick={startEdit}>Modifier</button>
       </div>

@@ -37,8 +37,8 @@
 }
 
 .badgeWarn {
-  background: #fef3c7;
-  color: #d97706;
+  background: var(--violet-light);
+  color: var(--violet);
 }
 
 .editBtn {
@@ -161,7 +161,6 @@
   font-family: inherit;
   color: var(--text);
   background: var(--surface);
-  outline: none;
   transition: border-color 0.15s;
 }
 

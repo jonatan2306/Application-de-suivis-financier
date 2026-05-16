@@ -136,6 +136,60 @@
   text-decoration: underline;
 }
 
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding: 64px 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.onboardingIcon {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.onboardingTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.onboardingDesc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.onboardingBtn {
+  margin-top: 8px;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.onboardingBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 20px;
+  }
+}
+
 @media (max-width: 640px) {
   .headerInner {
     padding: 0 16px;

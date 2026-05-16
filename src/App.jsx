@@ -9,7 +9,7 @@ import styles from './App.module.css'
 
 const TABS = [
   { id: 'dashboard', label: 'Tableau de bord' },
-  { id: 'add', label: '+ Ajouter' },
+  { id: 'add', label: 'Ajouter' },
   { id: 'transactions', label: 'Transactions' },
 ]
 
@@ -56,7 +56,20 @@ export default function App() {
       </header>
 
       <main className={styles.main}>
-        {tab === 'dashboard' && (
+        {tab === 'dashboard' && transactions.length === 0 && (
+          <div className={styles.onboarding}>
+            <div className={styles.onboardingIcon}>📊</div>
+            <h2 className={styles.onboardingTitle}>Bienvenue dans BudgetTracker</h2>
+            <p className={styles.onboardingDesc}>
+              Commencez par ajouter votre première transaction pour visualiser vos finances.
+            </p>
+            <button className={styles.onboardingBtn} onClick={() => setTab('add')}>
+              Ajouter ma première transaction
+            </button>
+          </div>
+        )}
+
+        {tab === 'dashboard' && transactions.length > 0 && (
           <div className={styles.dashboardLayout}>
             <section className={styles.section}>
               <h2 className={styles.sectionTitle}>Résumé financier</h2>
@@ -96,6 +109,7 @@ export default function App() {
                 <TransactionList
                   transactions={transactions.slice(0, 5)}
                   onDelete={deleteTransaction}
+                  showFilters={false}
                 />
               </div>
             </section>
@@ -115,14 +129,6 @@ export default function App() {
 
         {tab === 'transactions' && (
           <div className={styles.dashboardLayout}>
-            <section className={styles.section}>
-              <h2 className={styles.sectionTitle}>Résumé</h2>
-              <Dashboard
-                totalIncome={totalIncome}
-                totalExpenses={totalExpenses}
-                balance={balance}
-              />
-            </section>
             <section className={styles.section}>
               <h2 className={styles.sectionTitle}>Toutes les transactions</h2>
               <div className={styles.card}>

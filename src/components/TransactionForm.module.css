@@ -58,7 +58,6 @@
   font-family: inherit;
   color: var(--text);
   background: var(--surface);
-  outline: none;
   transition: border-color 0.15s;
   width: 100%;
 }
