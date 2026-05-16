@@ -13,6 +13,21 @@ const TABS = [
   { id: 'transactions', label: 'Transactions' },
 ]
 
+const LogoIcon = () => (
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+    <polyline points="16 7 22 7 22 13" />
+  </svg>
+)
+
+const OnboardingIcon = () => (
+  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="3" width="20" height="14" rx="2" />
+    <path d="M8 21h8M12 17v4" />
+    <path d="M7 10l3 3 3-3 3 3" />
+  </svg>
+)
+
 export default function App() {
   const [tab, setTab] = useState('dashboard')
   const {
@@ -35,11 +50,22 @@ export default function App() {
 
   return (
     <div className={styles.app}>
+      <div className={styles.bg} aria-hidden="true">
+        <div className={styles.bgGrid} />
+        <div className={styles.orb1} />
+        <div className={styles.orb2} />
+        <div className={styles.orb3} />
+      </div>
+
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <div className={styles.logo}>
-            <span className={styles.logoIcon}>💰</span>
-            <span className={styles.logoText}>BudgetTracker</span>
+            <div className={styles.logoMark}>
+              <LogoIcon />
+            </div>
+            <span className={styles.logoText}>
+              Fin<span className={styles.logoAccent}>track</span>
+            </span>
           </div>
           <nav className={styles.nav}>
             {TABS.map(t => (
@@ -58,10 +84,12 @@ export default function App() {
       <main className={styles.main}>
         {tab === 'dashboard' && transactions.length === 0 && (
           <div className={styles.onboarding}>
-            <div className={styles.onboardingIcon}>📊</div>
-            <h2 className={styles.onboardingTitle}>Bienvenue dans BudgetTracker</h2>
+            <div className={styles.onboardingIconWrap}>
+              <OnboardingIcon />
+            </div>
+            <h2 className={styles.onboardingTitle}>Bienvenue dans Fintrack</h2>
             <p className={styles.onboardingDesc}>
-              Commencez par ajouter votre première transaction pour visualiser vos finances.
+              Ajoutez votre première transaction pour visualiser vos finances en temps réel.
             </p>
             <button className={styles.onboardingBtn} onClick={() => setTab('add')}>
               Ajouter ma première transaction

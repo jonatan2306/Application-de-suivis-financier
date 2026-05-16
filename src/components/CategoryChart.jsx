@@ -54,9 +54,9 @@ export default function CategoryChart({ expensesByCategory }) {
           <Tooltip content={<CustomTooltip />} />
           <Legend
             iconType="circle"
-            iconSize={10}
+            iconSize={9}
             formatter={(value) => (
-              <span style={{ fontSize: '13px', color: '#374151' }}>{value}</span>
+              <span style={{ fontSize: '12px', color: 'rgba(226,232,248,0.6)', fontFamily: 'Manrope, sans-serif' }}>{value}</span>
             )}
           />
         </PieChart>

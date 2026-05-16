@@ -13,33 +13,40 @@
 }
 
 .empty span {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .empty p {
   font-size: 13px;
   text-align: center;
+  color: var(--text-subtle);
 }
 
 .tooltip {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 10px 14px;
+  background: rgba(13, 17, 32, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 11px;
+  padding: 11px 16px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  box-shadow: var(--shadow);
+  gap: 3px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .tooltipName {
-  font-size: 13px;
-  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(226, 232, 248, 0.45);
 }
 
 .tooltipValue {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #e2e8f8;
 }
