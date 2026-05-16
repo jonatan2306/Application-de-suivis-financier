@@ -12,6 +12,14 @@ npm run preview   # serve the production build locally
 
 There is no test runner or linter configured.
 
+## Global Skills Configuration
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\agent-browser
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\find-skills
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\frontend-design
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\remotion-best-practices
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\supabase-postgres-best-practices
+- Utilisez les règles de ma compétence globale située ici : C:\Users\jonatan\.agents\skills\vercel-react-best-practices
+
 ## Architecture
 
 **Stack**: React 18 + Vite, Recharts for charting, CSS Modules for styling. No TypeScript, no router library.
